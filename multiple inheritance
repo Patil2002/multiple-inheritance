@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace multiple_inheritance
+{
+
+    class student
+    {
+        public void info()
+        {
+            String name = "Pranjal";
+            String Class = "SYBCA";
+            Console.WriteLine("Student name :-" + name);
+            Console.WriteLine("Class:-" + Class);
+        }
+    } 
+         interface exam
+    {
+        void mark();
+    } 
+    class result:student, exam
+    {
+        public void mark()
+        {
+            String Subject = "c#.net";
+            int marks = 28;
+            Console.WriteLine("Subject:-" + Subject);
+            Console.WriteLine("Marks:-" + marks);
+        }
+        static void Main(string[] args)
+        {
+            result obj = new result();
+            obj.info();
+            obj.mark();
+            Console.ReadLine();
+
+        }
+    }
+}
